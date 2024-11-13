@@ -39,7 +39,7 @@ export default function Deletar_Clientes() {
           className="inputs"
           type="text"
           name="nome"
-          placeholder="Nome do produto..."
+          placeholder="Nome do cliente..."
           value={nome}
           onChange={(e) => set_nome(e.target.value)}
           required
