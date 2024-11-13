@@ -12,7 +12,7 @@ export default function Login() {
     form_data.append("usuario", usuario);
     form_data.append("senha", senha);
 
-    const resposta = await fetch("http://localhost:3000/", {
+    const resposta = await fetch("https://back-end-rs.onrender.com/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

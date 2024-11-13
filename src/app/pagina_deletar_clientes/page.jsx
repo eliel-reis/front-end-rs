@@ -10,13 +10,16 @@ export default function Deletar_Clientes() {
     const form_data = new FormData();
     form_data.append("nome", nome);
 
-    const response = await fetch("http://localhost:3000/deletar_clientes", {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ nome }),
-    });
+    const response = await fetch(
+      "https://back-end-rs.onrender.com/deletar_clientes",
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ nome }),
+      }
+    );
 
     if (response.ok) {
       alert("Produto deletado com sucesso!");

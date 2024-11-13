@@ -16,13 +16,16 @@ export default function Registrar_Clientes() {
     form_data.append("email", email);
     form_data.append("data", data);
 
-    const response = await fetch("http://localhost:3000/cadastrar_cliente", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ nome, email, telefone, data }),
-    });
+    const response = await fetch(
+      "https://back-end-rs.onrender.com/cadastrar_cliente",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ nome, email, telefone, data }),
+      }
+    );
 
     if (response.ok) {
       alert("Cliente cadastrado com sucesso!");

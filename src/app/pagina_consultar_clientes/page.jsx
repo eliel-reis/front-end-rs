@@ -6,7 +6,9 @@ export default function exibir_clientes() {
 
   useEffect(() => {
     const fetch_data = async () => {
-      const resposta = await fetch("http://localhost:3000/exibir_clientes");
+      const resposta = await fetch(
+        "https://back-end-rs.onrender.com/exibir_clientes"
+      );
       const data = await resposta.json();
       set_clientes(data);
     };
