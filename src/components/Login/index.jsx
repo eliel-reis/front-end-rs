@@ -37,7 +37,7 @@ export default function Login() {
       }}
     >
       <h1 className="text-3xl font-bold text-white mb-3  ">
-        Ofina Mecânica RS {status}
+        Oficina Mecânica RS {status}
       </h1>
       <form
         onSubmit={handle_submit}
