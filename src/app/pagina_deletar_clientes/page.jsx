@@ -22,9 +22,9 @@ export default function Deletar_Clientes() {
     );
 
     if (response.ok) {
-      alert("Produto deletado com sucesso!");
+      alert("Cliente deletado com sucesso!");
     } else {
-      alert("Erro ao deletar o produto.");
+      alert("Erro ao deletar o cliente.");
     }
   };
 
