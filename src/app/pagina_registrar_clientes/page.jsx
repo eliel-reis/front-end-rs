@@ -10,12 +10,6 @@ export default function Registrar_Clientes() {
   const handle_submit = async (e) => {
     e.preventDefault();
 
-    const form_data = new FormData();
-    form_data.append("nome", nome);
-    form_data.append("telefone", telefone);
-    form_data.append("email", email);
-    form_data.append("data", data);
-
     const response = await fetch(
       "https://back-end-rs.onrender.com/cadastrar_cliente",
       {
@@ -27,16 +21,18 @@ export default function Registrar_Clientes() {
       }
     );
 
+    const result = await response.json();
+
     if (response.ok) {
-      alert("Cliente cadastrado com sucesso!");
+      alert(result.message);
     } else {
-      alert("Erro ao cadastrar o cliente.");
+      alert(result.message);
     }
   };
 
   return (
     <form
-      className="border-2 border-[#3b82f5] rounded-md  mx-auto sm:mx-10  md:w-[1080px] mt-10 p-7"
+      className="border-2 border-[#3b82f5] rounded-md mx-auto sm:mx-10 md:w-[1080px] mt-10 p-7"
       onSubmit={handle_submit}
     >
       <section className="secao_inputs">
@@ -91,7 +87,7 @@ export default function Registrar_Clientes() {
       </section>
 
       <button className="button" type="submit">
-        Registar Cliente
+        Registrar Cliente
       </button>
     </form>
   );
