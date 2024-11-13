@@ -41,7 +41,7 @@ export default function Login() {
       </h1>
       <form
         onSubmit={handle_submit}
-        className="  border-2 border-white rounded-[8px] px-4  md:w-[30%] sm:w-[60%] md:h-[43%] sm:h-[50%] flex flex-col justify-start items-center gap-8  relative"
+        className="  border-2 border-white rounded-[8px] px-4  md:w-[30%] sm:w-[60%] md:h-[43%] sm:h-[30%] flex flex-col justify-start items-center gap-8  relative"
       >
         <section className="input_login">
           <label>Usuário:</label>
